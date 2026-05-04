@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>System Design | Study Room Environmental Analytics System</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <h1 class="site-title">System Design</h1>
+        <p class="site-subtitle">Study Room Environmental Analytics System</p>
+      </div>
+    </header>
+
+    <main class="container">
+      <nav class="top-nav" aria-label="Main Navigation">
+        <a class="button nav-button" href="./index.html">Home</a>
+        <a class="button nav-button" href="./hardware-implementation.html"
+          >Hardware Implementation</a
+        >
+        <a class="button nav-button" href="./software-data-flow.html"
+          >Software / Data Flow</a
+        >
+        <a class="button nav-button" href="./prototype-demo.html"
+          >Prototype Demo</a
+        >
+        <a class="button nav-button" href="./results-future-work.html"
+          >Results &amp; Future Work</a
+        >
+      </nav>
+
+      <section class="content-section">
+        <h2>Overview</h2>
+        <p>
+          The system captures room occupancy and environmental data, processes
+          it at the edge, and sends summarized results to the cloud for mobile
+          viewing.
+        </p>
+      </section>
+
+      <section class="content-section">
+        <h2>System Timeline</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-node">Camera + Sensors</div>
+            <p class="timeline-note">Capture room image and environment data</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-node">Edge Device</div>
+            <p class="timeline-note">Check each seat and process sensor data</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-node">WiFi</div>
+            <p class="timeline-note">Send results online</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-node">Cloud</div>
+            <p class="timeline-note">Store latest room information</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-node">Mobile App</div>
+            <p class="timeline-note">Display room status for students</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; <span id="year"></span> Your Name</p>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
