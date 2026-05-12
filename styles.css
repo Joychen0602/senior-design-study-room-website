@@ -785,6 +785,27 @@ a.timeline-node:focus-visible {
   scroll-margin-top: 1.25rem;
 }
 
+/* Stage details: hidden until a pipeline node sets the URL hash (e.g. #s3). */
+@supports selector(:has(*)) {
+  #pipeline-stages > h2,
+  #pipeline-stages > .section-lead {
+    display: none;
+  }
+
+  #pipeline-stages:has(.pipeline-stage:target) > h2,
+  #pipeline-stages:has(.pipeline-stage:target) > .section-lead {
+    display: block;
+  }
+
+  #pipeline-stages .pipeline-stage {
+    display: none;
+  }
+
+  #pipeline-stages .pipeline-stage:target {
+    display: block;
+  }
+}
+
 .section-lead {
   color: var(--muted);
   max-width: 70ch;
