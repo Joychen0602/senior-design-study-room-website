@@ -37,21 +37,68 @@
         </p>
         <div class="timeline" role="list" aria-label="Software and Data Flow">
           <div class="timeline-item" role="listitem">
-            <span class="timeline-node">Raspberry Pi &amp; ESP 32</span>
+            <a
+              class="timeline-node edge-node"
+              href="./hardware-implementation.html"
+              >Raspberry Pi &amp; ESP 32</a
+            >
           </div>
           <div class="timeline-item" role="listitem">
-            <span class="timeline-node">S3 Bucket</span>
+            <a class="timeline-node cloud-node" href="#s3">S3 Bucket</a>
           </div>
           <div class="timeline-item" role="listitem">
-            <span class="timeline-node">Lambda Code</span>
+            <a class="timeline-node cloud-node" href="#lambda">Lambda Code</a>
           </div>
           <div class="timeline-item" role="listitem">
-            <span class="timeline-node">DynamoDB Table</span>
+            <a class="timeline-node cloud-node" href="#dynamodb"
+              >DynamoDB Table</a
+            >
           </div>
           <div class="timeline-item" role="listitem">
-            <span class="timeline-node">App</span>
+            <a class="timeline-node user-node" href="#app">App</a>
           </div>
         </div>
+      </section>
+
+      <section class="content-section" id="pipeline-stages" aria-label="Pipeline stages">
+        <h2>Stage details</h2>
+        <p class="section-lead">
+          Details for the stage you selected appear below. Choose another node
+          in the pipeline to switch stages.
+        </p>
+
+        <article class="content-card pipeline-stage" id="s3">
+          <h3>S3 bucket</h3>
+          <p>
+            Raw or processed payloads from the edge land in object storage for
+            durable retention and downstream processing triggers.
+          </p>
+        </article>
+
+        <article class="content-card pipeline-stage" id="lambda">
+          <h3>Lambda</h3>
+          <p>
+            Serverless functions normalize events, run business logic, and
+            write results to the database or notify other services.
+          </p>
+        </article>
+
+        <article class="content-card pipeline-stage" id="dynamodb">
+          <h3>DynamoDB</h3>
+          <p>
+            Structured room state and metadata are stored for fast reads by the
+            mobile or web client.
+          </p>
+        </article>
+
+        <article class="content-card pipeline-stage" id="app">
+          <h3>App</h3>
+          <p>
+            Students see current study-room status. See also the
+            <a href="./prototype-demo.html">prototype demo</a> for UI and
+            walkthroughs.
+          </p>
+        </article>
       </section>
     </main>
 
