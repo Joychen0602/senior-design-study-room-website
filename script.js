@@ -3,8 +3,6 @@ const yearElement = document.getElementById("year");
 if (yearElement) {
   yearElement.textContent = String(new Date().getFullYear());
 }
-<<<<<<< HEAD
-=======
 
 const revealNodes = document.querySelectorAll(".reveal-on-scroll");
 
@@ -29,4 +27,3 @@ if (revealNodes.length > 0 && "IntersectionObserver" in window) {
     el.classList.add("is-visible");
   }
 }
->>>>>>> 357a869 (Update website design and add demo section)
