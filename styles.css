@@ -769,6 +769,28 @@ body::after {
   transform: translateY(-2px);
 }
 
+a.timeline-node {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  text-align: center;
+}
+
+a.timeline-node:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.pipeline-stage {
+  scroll-margin-top: 1.25rem;
+}
+
+.section-lead {
+  color: var(--muted);
+  max-width: 70ch;
+  margin: 0 0 1.25rem;
+}
+
 .timeline-node.edge-node {
   border-color: color-mix(in srgb, var(--edge) 45%, transparent);
   background: color-mix(in srgb, var(--edge) 16%, var(--surface-solid));
